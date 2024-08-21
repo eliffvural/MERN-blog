@@ -35,8 +35,13 @@ export default function Header() {
           <Button gradientDuoTone='orangeToPurple'>
                Sign In
           </Button>
-          
           </Link>
+
+          <Navbar.Collapse>
+            <Navbar.Link>
+              
+            </Navbar.Link>
+          </Navbar.Collapse>
 
 
         </div>
