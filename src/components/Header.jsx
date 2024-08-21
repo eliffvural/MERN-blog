@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-import React from 'react'
+import { Navbar } from "flowbite-react";
 
-=======
->>>>>>> ff6db60 (commit)
 export default function Header() {
   return (
-    <div>
-      
-    </div>
+    
+      <Navbar className="border-b-2">Header</Navbar>
+
   )
 }
