@@ -24,7 +24,7 @@ export default function Header() {
     
           />
         </form>
-        <Button  className='w-12 h-10 lg:hidden' color='orange' pill>
+        <Button  className='w-12 h-10 lg:hidden' color='gray' pill>
           <AiOutlineSearch/>
         </Button>
         <div className="flex items-center space-x-4">
@@ -33,8 +33,8 @@ export default function Header() {
             <FaMoon />
           </Button>
           <Link to="/sign-in">
-          <Button className="w-12 h-10 hidden sm:inline">
-
+          <Button className="w-12 h-10 hidden sm:inline" color='gray' pill>
+               Sign In
           </Button>
           
           </Link>
