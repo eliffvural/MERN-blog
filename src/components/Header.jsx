@@ -1,4 +1,4 @@
-import { Navbar, TextInput } from "flowbite-react";
+import { Button, Navbar, TextInput } from "flowbite-react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
@@ -19,14 +19,17 @@ export default function Header() {
           type="text"
           placeholder="Search..."
           rightIcon={AiOutlineSearch}
-          
-          
-          
+          className="hidden lg:inline"
+    
           />
-            
-
-         
         </form>
+        <Button  className='w-12 h-10 lg:hidden' color='orange'>
+          <AiOutlineSearch/>
+        </Button>
+        <div className="flex items-center space-x-4">
+
+          
+        </div>
         </Navbar>
 
   )
