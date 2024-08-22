@@ -38,7 +38,7 @@ export default function Header() {
         </Button>
        
         <Link to='/sign-in'>
-  <Button gradientDuoTone='purpleToBlue' className="text-black">
+  <Button className='px-2 py-1 bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 rounded-lg text-white'>
     Sign In
   </Button>
 </Link>
