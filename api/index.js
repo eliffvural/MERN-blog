@@ -1,5 +1,7 @@
 import express from 'express';
 
+mongoose.connect('mongodb+srv://elifvural03:<db_password>@mern-blog.el1cf.mongodb.net/?retryWrites=true&w=majority&appName=mern-blog');
+
 const app = express();
 
 app.listen(3000, ()=>{
