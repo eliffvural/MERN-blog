@@ -4,6 +4,9 @@ mongoose.connect('mongodb+srv://elifvural03:elifvural03@mern-blog.el1cf.mongodb.
 
 .then(()=> {
     console.log("Connected to MongoDB");
+})
+.catch(err =>{
+    console.log(err);
 });
 
 const app = express();
