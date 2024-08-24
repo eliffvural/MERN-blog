@@ -1,6 +1,6 @@
 import express from 'express';
 
-mongoose.connect('mongodb+srv://elifvural03:<db_password>@mern-blog.el1cf.mongodb.net/?retryWrites=true&w=majority&appName=mern-blog');
+mongoose.connect('mongodb+srv://elifvural03:elifvural03@mern-blog.el1cf.mongodb.net/?retryWrites=true&w=majority&appName=mern-blog');
 
 const app = express();
 
