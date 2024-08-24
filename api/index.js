@@ -1,4 +1,5 @@
 import express from 'express';
+import mongoose from 'mongoose';
 
 mongoose.connect('mongodb+srv://elifvural03:elifvural03@mern-blog.el1cf.mongodb.net/mern-blog?retryWrites=true&w=majority&appName=mern-blog')
 
