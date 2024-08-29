@@ -16,6 +16,7 @@ export const signup= async(req, res)=> {
     });
 
     await newUser.save();
+    res.json({message: 'signup successfull..'});
 
     
 }
