@@ -10,7 +10,7 @@ export const signup= async(req, res)=> {
 
     }
 
-    const hashedPassword= bcryptjs.hashedSync(password,10);
+    const hashedPassword= bcryptjs.hashSync(password,10);
 
     const newUser= new User({
         username,
