@@ -15,8 +15,16 @@ export const signup= async(req, res)=> {
         password,
     });
 
-    await newUser.save();
+
+    try {
+         await newUser.save();
     res.json( 'signup successfull..');
+        
+    } catch (error) {
+        
+    }
+
+   
 
     
 }

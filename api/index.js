@@ -6,14 +6,13 @@ import userRoutes from './routes/user.route.js';
 
 dotenv.config();
 
-console.log("MongoDB URI:", process.env.MONGO);
-
-mongoose.connect(process.env.MONGO)
-.then(() => {
+mongoose
+.connect(process.env.MONGO)
+.then(()=> {
     console.log("Connected to MongoDB");
 })
-.catch(err => {
-    console.error("MongoDB connection error:", err);
+.catch(err =>{
+    console.log(err);
 });
 
 const app = express();
