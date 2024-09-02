@@ -1,7 +1,6 @@
 export default function SignUp() {
-  return (
-    <div>
-      Sign Up
+  return  <div className='min-h-screen mt-20'>
+    
     </div>
-  )
+  
 }
