@@ -4,7 +4,7 @@ export default function SignUp() {
   return  (
   
   <div className='min-h-screen mt-20'>
-    <div className=''>
+    <div className='flex p-3 max-w-3xl'>
       <div className=''>
 
       <Link  to='/'
