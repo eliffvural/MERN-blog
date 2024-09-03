@@ -23,7 +23,7 @@ export default function SignUp() {
           <form>
             <div>
               <Label className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
-              <TextInput />
+              <TextInput type="text" placeholder="Username" id="username"/>
             </div>
 
           </form>
