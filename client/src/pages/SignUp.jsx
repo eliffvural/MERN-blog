@@ -1,3 +1,4 @@
+import { Label, TextInput } from "flowbite-react";
 import { Link } from "react-router-dom";
 
 export default function SignUp() {
@@ -22,6 +23,7 @@ export default function SignUp() {
           <form>
             <div>
               <Label className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
+              <TextInput />
             </div>
 
           </form>
