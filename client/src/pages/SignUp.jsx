@@ -22,9 +22,20 @@ export default function SignUp() {
          <div>
           <form>
             <div>
-              <Label className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
+              <Label value="your username" className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
               <TextInput type="text" placeholder="Username" id="username"/>
             </div>
+
+            <div>
+              <Label value="your email" className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
+              <TextInput type="text" placeholder="Username" id="username"/>
+            </div>
+
+            <div>
+              <Label value="your password" className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
+              <TextInput type="text" placeholder="Username" id="username"/>
+            </div>
+
 
           </form>
          </div>
