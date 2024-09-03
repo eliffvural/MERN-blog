@@ -28,12 +28,12 @@ export default function SignUp() {
 
             <div>
               <Label value="your email" className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
-              <TextInput type="text" placeholder="Username" id="username"/>
+              <TextInput type="text" placeholder="Email" id="username"/>
             </div>
 
             <div>
               <Label value="your password" className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
-              <TextInput type="text" placeholder="Username" id="username"/>
+              <TextInput type="text" placeholder="Password" id="username"/>
             </div>
 
 
