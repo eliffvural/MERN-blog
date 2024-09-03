@@ -14,6 +14,7 @@ export default function SignUp() {
         </span>
         Blog
       </Link>
+      <p className="text-sm mt-5">This is a demo project. You can sign up.</p>
         
          </div>
     </div>
