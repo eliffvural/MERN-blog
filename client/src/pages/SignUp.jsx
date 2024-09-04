@@ -28,17 +28,27 @@ export default function SignUp() {
 
             <div>
               <Label value="your email" className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
-              <TextInput type="text" placeholder="Email" id="username"/>
+              <TextInput type="email" placeholder="nameblog@gmail.com" id="email"/>
             </div>
 
             <div>
               <Label value="your password" className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
-              <TextInput type="text" placeholder="Password" id="username"/>
+              <TextInput type="password" placeholder="Password" id="password"/>
             </div>
-            <Button gradientDuoTone='purpleToPink' type="submit">
+            <Button className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white" type="submit">
               Sign Up
             </Button>
+
           </form>
+
+          <div>
+            <span className="flex gap-2 text-sm mt-5">
+              Have an account?
+            </span>
+            <Link to='/sign-in' className="text-blue-500">
+            Sign In
+            </Link>
+          </div>
          </div>
     </div>
     

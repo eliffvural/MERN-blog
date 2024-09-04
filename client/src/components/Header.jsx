@@ -1,10 +1,22 @@
 import { Button, Navbar, TextInput } from 'flowbite-react';
+import { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
-
 
 export default function Header() {
   const path = useLocation().pathname;
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+      document.documentElement.classList.add('dark');
+    } else {
+      setTheme('light');
+      document.documentElement.classList.remove('dark');
+    }
+  };
 
   return (
     <Navbar className='border-b-2'>
@@ -23,26 +35,21 @@ export default function Header() {
           placeholder='Search...'
           rightIcon={AiOutlineSearch}
           className='hidden lg:inline'
-                  />
+        />
       </form>
       <Button className='w-12 h-10 lg:hidden' color='gray' pill>
         <AiOutlineSearch />
       </Button>
       <div className='flex gap-2 md:order-2'>
-        <Button
-          className='w-12 h-10 hidden sm:inline'
-          color='gray'
-          pill>
+        <Button className='w-12 h-10 hidden sm:inline' color='gray' pill onClick={toggleTheme}>
+          {theme === 'light' ? <FaSun className='text-yellow-500' /> : <FaMoon className='text-gray-700 dark:text-gray-200' />}
         </Button>
-        
-          <Link to='/sign-in'>
-            <Button className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white' >
-              Sign In
-            </Button>
-          </Link>
-        
-        
-        
+
+        <Link to='/sign-in'>
+          <Button className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
+            Sign In
+          </Button>
+        </Link>
       </div>
 
       <Navbar.Toggle />
@@ -57,7 +64,6 @@ export default function Header() {
           <Link to='/projects'>Projects</Link>
         </Navbar.Link>
       </Navbar.Collapse>
-      
     </Navbar>
   );
 }
