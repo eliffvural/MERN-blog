@@ -23,17 +23,17 @@ export default function SignUp() {
           <form>
             <div>
               <Label value="your username" className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
-              <TextInput type="text" placeholder="Username" id="username"/>
+              <TextInput type="text" placeholder="Username" id="username" onChange={handleChange}/>
             </div>
 
             <div>
               <Label value="your email" className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
-              <TextInput type="email" placeholder="nameblog@gmail.com" id="email"/>
+              <TextInput type="email" placeholder="nameblog@gmail.com" id="email" onChange={handleChange}/>
             </div>
 
             <div>
               <Label value="your password" className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
-              <TextInput type="password" placeholder="Password" id="password"/>
+              <TextInput type="password" placeholder="Password" id="password" onChange={handleChange}/>
             </div>
             <Button className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white" type="submit">
               Sign Up
