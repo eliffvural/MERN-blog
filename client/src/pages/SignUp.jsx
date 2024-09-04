@@ -2,6 +2,13 @@ import { Button, Label, TextInput } from "flowbite-react";
 import { Link } from "react-router-dom";
 
 export default function SignUp() {
+
+  const [formData, setFormDaha]= useState({});
+
+  const handleChange=(e)=>{
+    setFormDaha({...formData, [e.target.id]: e.target.value});
+    };
+
   return  (
   
   <div className='min-h-screen mt-20'>
