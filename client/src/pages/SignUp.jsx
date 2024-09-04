@@ -1,4 +1,5 @@
 import { Button, Label, TextInput } from "flowbite-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function SignUp() {
@@ -9,7 +10,25 @@ export default function SignUp() {
     setFormDaha({...formData, [e.target.id]: e.target.value});
     };
 
-  console.log(formData);
+
+
+    const handleSubmit=(e)=>{
+      e.preventDefault();
+      try {
+        const res = await fetch('/api/auth/signup ', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            },
+          body: JSON.stringify(formData)
+        })
+        
+      } catch (error) {
+
+        
+      }
+    };
+
 
   return  (
   
@@ -31,7 +50,7 @@ export default function SignUp() {
          <div>
           <form>
             <div>
-              <Label value="your username" className="block text-sm font-medium text-gray-700 dark:text-gray-200" />
+              <Label value="your username" className="block text-sm font-medium text-gray-700 dark:text-gray-200" onSubmit={handleSubmit} />
               <TextInput type="text" placeholder="Username" id="username" onChange={handleChange}/>
             </div>
 
