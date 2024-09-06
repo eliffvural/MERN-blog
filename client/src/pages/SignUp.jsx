@@ -1,4 +1,4 @@
-import { Button, Label, TextInput } from "flowbite-react";
+import { Alert, Button, Label, TextInput } from "flowbite-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -86,6 +86,16 @@ export default function SignUp() {
             Sign In
             </Link>
           </div>
+
+          {
+            errorMessage && (
+              <Alert className="mt-5" color='failure'>
+                {errorMessage}
+
+              </Alert>
+            )
+
+          }
          </div>
     </div>
     
