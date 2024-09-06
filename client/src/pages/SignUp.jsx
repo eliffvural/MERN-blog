@@ -5,12 +5,19 @@ import { Link } from "react-router-dom";
 export default function SignUp() {
 
   const [formData, setFormData]= useState({});
+  const [errorMessage, setErrorMessage]= useState(null);
+  const [loading, setLoading]= useState(false);
 
   const handleChange=(e)=>{
-    setFormData({...formData, [e.target.id]: e.target.value});
+    setFormData({...formData, [e.target.id]: e.target.value.trim()});
     };
-    const handleSubmit= async(e)=>{
+  
+  const handleSubmit= async(e)=>{
       e.preventDefault();
+
+      if(!formData.username || !formData.email || !formData.password){
+        return setErrorMessage('please fill out all fields');
+      }
       try {
         const res = await fetch('/api/auth/sign-up', {
           method: 'POST',
