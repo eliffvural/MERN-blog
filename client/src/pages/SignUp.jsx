@@ -4,31 +4,33 @@ import { Link } from "react-router-dom";
 
 export default function SignUp() {
 
-  const [formData, setFormDaha]= useState({});
+  const [formData, setFormData]= useState({});
 
   const handleChange=(e)=>{
-    setFormDaha({...formData, [e.target.id]: e.target.value});
+    setFormData({...formData, [e.target.id]: e.target.value});
     };
-
-
-
-    const handleSubmit=(e)=>{
+    const handleSubmit= async(e)=>{
       e.preventDefault();
       try {
-        const res = await fetch('/api/auth/signup ', {
+        const res = await fetch('/api/auth/sign-up', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             },
-          body: JSON.stringify(formData),
-        })
-        
-      } catch (error) {
+            body: JSON.stringify(formData),
+            });
+            const data = await res.json();
+            console.log(data);
+            } catch (error) {
+              console.error(error);
+              }
+              };
 
-        
-      }
-    };
 
+
+
+
+   
 
   return  (
   
