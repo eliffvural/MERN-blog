@@ -82,7 +82,7 @@ export default function SignUp() {
             <Button 
   className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white" 
   style={{ width: '150px' }} // Burada genişliği ayarlayabilirsiniz
-  type="submit"
+  type="submit" disabled={loading}
 >
   Sign Up
 </Button>
