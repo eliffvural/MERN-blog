@@ -1,11 +1,12 @@
-import { Alert, Button, Label, TextInput } from 'flowbite-react';
+import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function SignUp() {
   const [formData, setFormData] = useState({});
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
+  const navigate= useNavigate();
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
   };
@@ -25,6 +26,10 @@ export default function SignUp() {
       const data = await res.json();
       if (data.success === false) {
         return setErrorMessage(data.message);
+      }
+      setLoading(false);
+      if(res.ok){
+        navigate('/sign-in');
       }
      
     } catch (error) {
@@ -79,12 +84,15 @@ export default function SignUp() {
                 onChange={handleChange}
               />
             </div>
-            <Button 
-  className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white" 
-  style={{ width: '150px' }} // Burada genişliği ayarlayabilirsiniz
-  type="submit" disabled={loading}
->
-  Sign Up
+            <Button className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white" style={{ width: '150px' }} type="submit" disabled={loading}>
+    {
+      loading ? (
+
+        <><Spinner size='sm' /><span>Loading...</span></>
+
+      ): 'Sign Up'
+    }
+   
 </Button>
            
           </form>
